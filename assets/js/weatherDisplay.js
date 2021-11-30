@@ -2,15 +2,16 @@ var displayWeather = function () {
   // display curr weather
   console.log(weatherObj);
   var currentCity = document.getElementById("currCity");
-  currentCity.innerText = weatherObj[0].city + ` (${weatherObj[0].date})`;
+  currentCity.textContent = weatherObj[0].city + ` (${weatherObj[0].date})`;
   var currentTemp = document.getElementById("currTemp");
-  currentTemp.innerText = `Temp: ${weatherObj[0].temp} °F`;
+  currentTemp.textContent = `Temp: ${weatherObj[0].temp} °F`;
   var currentWind = document.getElementById("currWind");
-  currentWind.innerText = `Wind: ${weatherObj[0].wind} MPH`;
+  currentWind.textContent = `Wind: ${weatherObj[0].wind} MPH`;
   var currentHumid = document.getElementById("currHumid");
-  currentHumid.innerText = `Humidity: ${weatherObj[0].humidity} %`;
+  currentHumid.textContent = `Humidity: ${weatherObj[0].humidity} %`;
   var currentUv = document.getElementById("currUv");
-  currentUv.innerText = `UV Index: ${weatherObj[0].uv}`;
+  // currentUv.createElement("span") = `<span>UV Index: ${weatherObj[0].uv}</span>`
+  currentUv.textContent = `UV Index: ${weatherObj[0].uv}`;
   // if (currentUV.innerText <= 2) {
   //   currentUv.classList.add("class", "bg-success");
   // }
@@ -31,18 +32,18 @@ var displayWeather = function () {
     cardBodyEl.setAttribute("style", "background-color: rgb(12, 12, 44)")
     var cardDate = document.createElement("h5");
     cardDate.setAttribute("class", "card-title");
-    cardDate.innerText = currObj.date;
+    cardDate.innerHTML = currObj.date;
     var cardImg = document.createElement("i");
     cardImg.setAttribute("class", "card-img-top");
     var cardTemp = document.createElement("p");
     cardTemp.setAttribute("class", "card-text");
-    cardTemp.innerText = `Temp: ${currObj.temp} °F`;
+    cardTemp.innerHTML = `Temp: ${currObj.temp} °F`;
     var cardWind = document.createElement("p");
     cardWind.setAttribute("class", "card-text");
-    cardWind.innerText = `Wind: ${currObj.wind} MPH`;
+    cardWind.innerHTML = `Wind: ${currObj.wind} MPH`;
     var cardHumid = document.createElement("p");
     cardHumid.setAttribute("class", "card-text");
-    cardHumid.innerText = `Humidity: ${currObj.humidity} %`;
+    cardHumid.innerHTML = `Humidity: ${currObj.humidity} %`;
 
     cardBodyEl.append(cardDate, cardImg, cardTemp, cardWind, cardHumid);
     cardContainerEl.append(cardBodyEl);
