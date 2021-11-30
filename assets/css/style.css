@@ -19,3 +19,35 @@ label {
   display: grid;
   height: 245px;
 }
+
+#five-day p {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 1000px) {
+  h5 {
+    font-size: 13px;
+    padding-left: 5px;
+  }
+  #five-day p {
+    font-size: 10px;
+    padding-left: 5px;
+    flex-wrap: wrap;
+  }
+  #five-day i {
+    padding-left: 5px;
+  }
+  .card {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #five-day p {
+    font-size: 16px;
+  }
+  h5 {
+    font-size: 40px;
+    padding-left: 5px;
+  }
+}

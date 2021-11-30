@@ -37,7 +37,7 @@
     </header>
     <container class="container-fluid pr-0 pl-0 ml-0 mr-0">
       <section class="row pt-2">
-        <div class="col-sm-2 ml-2 pr-0">
+        <div class="col-12 col-md-2 ml-2 pr-0">
           <form id="search-form" class="border-bottom border-dark pb-3">
             <!-- search input and search button go here -->
             <label class="form-label" for="cityname">Search for a City:</label>
@@ -52,27 +52,28 @@
               Search
             </button>
           </form>
-          <div id="search-history col-12">
+          <div id="search-history">
             <!-- search history clickable links go here -->
             <button type="click" class="btn btn-secondary btn-block mt-3">
               History
             </button>
           </div>
         </div>
-        <div class="col-sm-8">
+        <div class="col 12 col-md-8">
           <div class="row">
             <div class="col-12">
               <!-- city current weather here -->
+
               <div class="card-deck">
                 <div class="card">
                   <div class="card-body w-100 border border-dark pl-1 pt-1">
                     <h2 class="card-title" id="currCity"></h2>
-                    <img
+                    <!-- <img
                       src="..."
                       class="card-img-top"
                       id="currImg"
                       alt="..."
-                    />
+                    /> -->
                     <p class="card-text" id="currTemp"></p>
                     <p class="card-text" id="currWind"></p>
                     <p class="card-text" id="currHumid"></p>
@@ -82,70 +83,10 @@
               </div>
             </div>
           </div>
-          <div id="5-day" class="row justify-content-between mt-3">
-            <h2 class="col-sm-12">5-Day Forecast:</h2>
+          <div class="row justify-content-between mt-3">
+            <h2 class="col-md-12">5-Day Forecast:</h2>
             <!-- 5-day forecast for city here -->
-            <div class="card-deck col-sm-12 p-0 ml-auto mr-auto">
-              <div class="card" id="day1">
-                <div
-                  class="card-body text-light pl-1 pt-1"
-                  style="background-color: rgb(12, 12, 44)"
-                >
-                  <h3 class="card-title day1date"></h3>
-                  <img src="..." class="card-img-top day1img" alt="..." />
-                  <p class="card-text day1temp"></p>
-                  <p class="card-text day1wind"></p>
-                  <p class="card-text day1humid"></p>
-                </div>
-              </div>
-              <div class="card" id="day2">
-                <div
-                  class="card-body text-light pl-1 pt-1"
-                  style="background-color: rgb(12, 12, 44)"
-                >
-                  <h3 class="card-title day2date"></h3>
-                  <img src="..." class="card-img-top day2img" alt="..." />
-                  <p class="card-text day2temp"></p>
-                  <p class="card-text day2wind"></p>
-                  <p class="card-text day2humid"></p>
-                </div>
-              </div>
-              <div class="card" id="day3">
-                <div
-                  class="card-body text-light pl-1 pt-1"
-                  style="background-color: rgb(12, 12, 44)"
-                >
-                  <h3 class="card-title day3date"></h3>
-                  <img src="..." class="card-img-top day3img" alt="..." />
-                  <p class="card-text day3temp"></p>
-                  <p class="card-text day3wind"></p>
-                  <p class="card-text day3humid"></p>
-                </div>
-              </div>
-              <div class="card" id="day4">
-                <div
-                  class="card-body text-light pl-1 pt-1"
-                  style="background-color: rgb(12, 12, 44)"
-                >
-                  <h3 class="card-title day4date"></h3>
-                  <img src="..." class="card-img-top day4img" alt="..." />
-                  <p class="card-text day4temp"></p>
-                  <p class="card-text day4wind"></p>
-                  <p class="card-text day4humid"></p>
-                </div>
-              </div>
-              <div class="card" id="day5">
-                <div
-                  class="card-body text-light pl-1 pt-1"
-                  style="background-color: rgb(12, 12, 44)"
-                >
-                  <h3 class="card-title day5date"></h3>
-                  <img src="..." class="card-img-top day5img" alt="..." />
-                  <p class="card-text day5temp"></p>
-                  <p class="card-text day5wind"></p>
-                  <p class="card-text day5humid"></p>
-                </div>
-              </div>
+            <div id="five-day" class="card-deck col-md-12 p-0 ml-auto mr-auto">
             </div>
           </div>
         </div>
@@ -153,6 +94,8 @@
     </container>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/weatherDisplay.js"></script>
+    <script src="/assets/js/script.js"></script>
   </body>
 </html>
