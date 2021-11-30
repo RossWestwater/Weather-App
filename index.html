@@ -21,12 +21,24 @@
   </head>
   <body>
     <header>
-      <h1 class="text-center">Weather Dashboard</h1>
+      <h1
+        class="text-center text-light py-3"
+        style="
+          background-image: linear-gradient(
+            to right,
+            rgb(96, 96, 245),
+            40%,
+            rgb(22, 22, 83)
+          );
+        "
+      >
+        Weather Dashboard
+      </h1>
     </header>
-    <container class="container-fluid">
-      <section class="row">
-        <div class="col-sm-2">
-          <article id="search-form">
+    <container class="container-fluid pr-0 pl-0 ml-0 mr-0">
+      <section class="row pt-2">
+        <div class="col-sm-2 ml-2 pr-0">
+          <form id="search-form" class="border-bottom border-dark pb-3">
             <!-- search input and search button go here -->
             <label class="form-label" for="cityname">Search for a City:</label>
             <input
@@ -34,115 +46,104 @@
               id="city-name"
               type="text"
               placeholder="City Name"
-              class="form-control"
+              class="form-control mb-3 mt-1"
             />
             <button type="submit" class="btn btn-primary btn-block">
               Search
             </button>
-          </article>
-          <div id="search-history">
+          </form>
+          <div id="search-history col-12">
             <!-- search history clickable links go here -->
-            <div>placeholder</div>
-            <div>placeholder</div>
-            <div>placeholder</div>
-            <div>placeholder</div>
-            <div>placeholder</div>
-            <div>placeholder</div>
-            <div>placeholder</div>
+            <button type="click" class="btn btn-secondary btn-block mt-3">
+              History
+            </button>
           </div>
         </div>
-        <div class="col-sm-10">
+        <div class="col-sm-8">
           <div class="row">
-            <div id="current-weather" class="col-12 ">
+            <div class="col-12">
               <!-- city current weather here -->
               <div class="card-deck">
-                <div class="card ">
-                  <img src="..." class="card-img-top" alt="..." />
-                  <div class="card-body w-100">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
-                      This is a longer card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
-                    </p>
-                    <p class="card-text">
-                      <small class="text-muted">Last updated 3 mins ago</small>
-                    </p>
+                <div class="card">
+                  <div class="card-body w-100 border border-dark pl-1 pt-1">
+                    <h2 class="card-title" id="currCity"></h2>
+                    <img
+                      src="..."
+                      class="card-img-top"
+                      id="currImg"
+                      alt="..."
+                    />
+                    <p class="card-text" id="currTemp"></p>
+                    <p class="card-text" id="currWind"></p>
+                    <p class="card-text" id="currHumid"></p>
+                    <p class="card-text" id="currUv"></p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div id="5-day" class="row justify-content-center">
+          <div id="5-day" class="row justify-content-between mt-3">
+            <h2 class="col-sm-12">5-Day Forecast:</h2>
             <!-- 5-day forecast for city here -->
-            <div class="card-deck col-sm-12">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    This is a longer card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
-                  </p>
-                  <p class="card-text">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </p>
+            <div class="card-deck col-sm-12 p-0 ml-auto mr-auto">
+              <div class="card" id="day1">
+                <div
+                  class="card-body text-light pl-1 pt-1"
+                  style="background-color: rgb(12, 12, 44)"
+                >
+                  <h3 class="card-title day1date"></h3>
+                  <img src="..." class="card-img-top day1img" alt="..." />
+                  <p class="card-text day1temp"></p>
+                  <p class="card-text day1wind"></p>
+                  <p class="card-text day1humid"></p>
                 </div>
               </div>
-              <div class="card">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    This card has supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                  <p class="card-text">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </p>
+              <div class="card" id="day2">
+                <div
+                  class="card-body text-light pl-1 pt-1"
+                  style="background-color: rgb(12, 12, 44)"
+                >
+                  <h3 class="card-title day2date"></h3>
+                  <img src="..." class="card-img-top day2img" alt="..." />
+                  <p class="card-text day2temp"></p>
+                  <p class="card-text day2wind"></p>
+                  <p class="card-text day2humid"></p>
                 </div>
               </div>
-              <div class="card">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This card has even longer
-                    content than the first to show that equal height action.
-                  </p>
-                  <p class="card-text">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </p>
+              <div class="card" id="day3">
+                <div
+                  class="card-body text-light pl-1 pt-1"
+                  style="background-color: rgb(12, 12, 44)"
+                >
+                  <h3 class="card-title day3date"></h3>
+                  <img src="..." class="card-img-top day3img" alt="..." />
+                  <p class="card-text day3temp"></p>
+                  <p class="card-text day3wind"></p>
+                  <p class="card-text day3humid"></p>
                 </div>
               </div>
-              <div class="card">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This card has even longer
-                    content than the first to show that equal height action.
-                  </p>
-                  <p class="card-text">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </p>
+              <div class="card" id="day4">
+                <div
+                  class="card-body text-light pl-1 pt-1"
+                  style="background-color: rgb(12, 12, 44)"
+                >
+                  <h3 class="card-title day4date"></h3>
+                  <img src="..." class="card-img-top day4img" alt="..." />
+                  <p class="card-text day4temp"></p>
+                  <p class="card-text day4wind"></p>
+                  <p class="card-text day4humid"></p>
                 </div>
               </div>
-              <div class="card">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This card has even longer
-                    content than the first to show that equal height action.
-                  </p>
-                  <p class="card-text">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </p>
+              <div class="card" id="day5">
+                <div
+                  class="card-body text-light pl-1 pt-1"
+                  style="background-color: rgb(12, 12, 44)"
+                >
+                  <h3 class="card-title day5date"></h3>
+                  <img src="..." class="card-img-top day5img" alt="..." />
+                  <p class="card-text day5temp"></p>
+                  <p class="card-text day5wind"></p>
+                  <p class="card-text day5humid"></p>
                 </div>
               </div>
             </div>
