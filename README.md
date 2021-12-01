@@ -7,7 +7,7 @@ Provide a short description explaining the what, why, and how of your project. U
 - What problem does it solve?
 - What did you learn?
 
-This is an app using an external weather server-based API from openweathermap.org. It was created to check the current and 5 day forecast of a given city, which might be useful for travelling plans. I learned a good bit about the impact of chaining functions and the headaches lots of chaining calls can make in the event a bug needs to be sorted out. I also learned that you can "modularize" the code across multiple sheets to help tidy aspects of the code. I also started using "template literals" which was a fun thing to learn (courtesy of my tutor). Being able to decipher error codes in the console and fixing code effectively is getting easier.
+This is an app using an external weather server-based API from openweathermap.org. It was created to check the current and 5 day forecast of a given city, which might be useful for travelling plans. I learned a good bit about the impact of chaining functions and the headaches lots of chaining calls can make in the event a bug needs to be sorted out. I also learned that you can "modularize" the code across multiple sheets to help tidy aspects of the code. I also started using "template literals" which was a fun thing to learn (courtesy of my tutor). Being able to decipher error codes in the console and fixing code effectively is getting easier. I also didn't use Jquery to continue to develop my understanding of plain JavaScript functionality and not create confusion between what's a Jquery method and what is a Javascript method.
 
 repo URL: https://github.com/RossWestwater/Weather-App
 deployed site URL: https://rosswestwater.github.io/Weather-App/
