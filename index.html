@@ -54,30 +54,22 @@
           </form>
           <div id="search-history">
             <!-- search history clickable links go here -->
-            <button type="click" class="btn btn-secondary btn-block mt-3">
-              History
-            </button>
           </div>
         </div>
         <div class="col 12 col-md-8">
           <div class="row">
             <div class="col-12">
               <!-- city current weather here -->
-
+            
               <div class="card-deck">
                 <div class="card">
-                  <div class="card-body w-100 border border-dark pl-1 pt-1">
+                  <div class="card-body w-100 border border-dark pl-1 pt-1 text-light" style="background-color: rgb(22, 22, 83);">
                     <h2 class="card-title" id="currCity"></h2>
-                    <!-- <img
-                      src="..."
-                      class="card-img-top"
-                      id="currImg"
-                      alt="..."
-                    /> -->
                     <p class="card-text" id="currTemp"></p>
                     <p class="card-text" id="currWind"></p>
                     <p class="card-text" id="currHumid"></p>
-                    <p class="card-text" id="currUv"><span id="uvStyle"></span></p>
+                    <p class="card-text" id="currUv">
+                    </p>
                   </div>
                 </div>
               </div>
@@ -86,16 +78,18 @@
           <div class="row justify-content-between mt-3">
             <h2 class="col-md-12">5-Day Forecast:</h2>
             <!-- 5-day forecast for city here -->
-            <div id="five-day" class="card-deck col-md-12 p-0 ml-auto mr-auto">
-            </div>
+            <div
+              id="five-day"
+              class="card-deck col-md-12 p-0 ml-auto mr-auto"
+            ></div>
           </div>
         </div>
       </section>
     </container>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="/assets/js/global.js"></script>
-    <script src="/assets/js/weatherDisplay.js"></script>
-    <script src="/assets/js/script.js"></script>
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/weatherDisplay.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

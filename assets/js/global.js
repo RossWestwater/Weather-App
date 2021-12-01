@@ -4,8 +4,8 @@ var weatherObj = [
   lat: [],
   lon: [],
   date: moment().format("M/D/YYYY"),
-  temp:[""],
-  wind:[""],
+  temp:[],
+  wind:[],
   humidity:[],
   uv:[],
   img:[]

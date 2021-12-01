@@ -11,7 +11,7 @@ h1 {
 }
 
 label {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bolder;
 }
 
@@ -24,9 +24,24 @@ label {
   font-size: 12px;
 }
 
+#current-img {
+  width: 60px;
+  height: 60px;
+}
+
+#daily-img1, #daily-img2, #daily-img3, #daily-img4, #daily-img5 {
+  width: 60px;
+  height: 60px;
+}
+
+#uvRound {
+  border-radius: 5px;
+  padding: 2px 10px
+}
+
 @media screen and (max-width: 1000px) {
-  h5 {
-    font-size: 13px;
+  #h5-1, #h5-2, #h5-3, #h5-4, #h5-5 {
+    font-size: 0.9rem;
     padding-left: 5px;
   }
   #five-day p {
@@ -41,13 +56,46 @@ label {
     margin-left: 10px;
   }
 }
-
-@media screen and (max-width: 575px) {
-  #five-day p {
-    font-size: 16px;
-  }
-  h5 {
-    font-size: 40px;
+@media screen and (max-width: 767px) {
+  #h5-1, #h5-2, #h5-3, #h5-4, #h5-5 {
+    font-size: 1rem;
     padding-left: 5px;
+  }
+  #five-day p {
+    font-size: 10px;
+    padding-left: 5px;
+    flex-wrap: wrap;
+  }
+  #five-day i {
+    padding-left: 5px;
+  }
+  .card {
+    margin-left: 10px;
+  }
+  #search-history {
+    margin-bottom:20px;
+  }
+}
+@media screen and (max-width: 575px) {
+  #h5-1, #h5-2, #h5-3, #h5-4, #h5-5 {
+    font-size: 2rem;
+    padding-left: 5px;
+  }
+  #five-day p {
+    font-size: 1rem;
+    padding-left: 5px;
+    flex-wrap: wrap;
+  }
+  #five-day i {
+    padding-left: 5px;
+  }
+  .card {
+    margin-left: 10px;
+  }
+
+  .btn-block{
+    width: 48%;
+    margin-right: 2px;
+    display: inline-block;
   }
 }
