@@ -16,11 +16,6 @@ var formSubmitHandler = function (event) {
   if (cityName) {
     // start identifying the city as a valid city and, if so, fetch its weather API data.
     getCity(cityName);
-    // create a search button for the searched city
-    createHistory(cityName);
-    // save the searched input to local storage
-    saveHistory(cityName);
-    // reset the search input field after each "submit". if nothing was put in the input field, return an error.
     cityInput.value = "";
   } else {
     alert("Please enter a City Name");
@@ -36,9 +31,6 @@ var getCity = function (city) {
       if (response.ok) {
         return response.json();
       } else {
-        savedHistory.shift();
-        historyEl.removeChild(historyEl.childNodes[0]);
-        localStorage.setItem("savedsearch", JSON.stringify(savedHistory));
         alert("Please enter a valid city name");
         return;
       }
@@ -47,6 +39,11 @@ var getCity = function (city) {
       weatherObj[0].lat.splice(0, 1, data.coord.lat);
       weatherObj[0].lon.splice(0, 1, data.coord.lon);
       weatherObj[0].city.splice(0, 1, data.name);
+      // create a search button for the searched city
+      createHistory(data.name);
+      // save the searched input to local storage
+      saveHistory(data.name);
+      // reset the search input field after each "submit". if nothing was put in the input field, return an error.
       getWeather(data.coord.lat, data.coord.lon);
     });
 };
@@ -101,11 +98,11 @@ var historySearch = function (event) {
 var saveHistory = function (cityHistory) {
   // limit only 10 buttons upon refresh, so the buttons don't get out of hand
   if (savedHistory.length < 10) {
-    savedHistory.unshift(cityHistory);
+    savedHistory.push(cityHistory);
     localStorage.setItem("savedsearch", JSON.stringify(savedHistory));
   } else {
-    savedHistory.unshift(cityHistory);
-    savedHistory.pop();
+    savedHistory.push(cityHistory);
+    savedHistory.shift();
     localStorage.setItem("savedsearch", JSON.stringify(savedHistory));
   }
 };
